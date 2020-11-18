@@ -1,0 +1,436 @@
+[gd_scene load_steps=14 format=2]
+
+[ext_resource path="res://dark.tres" type="Theme" id=1]
+[ext_resource path="res://Main.gd" type="Script" id=2]
+[ext_resource path="res://Tabs.gd" type="Script" id=3]
+[ext_resource path="res://Scenes/Inspector.tscn" type="PackedScene" id=4]
+
+[sub_resource type="StyleBoxFlat" id=1385]
+content_margin_left = 4.0
+content_margin_right = 4.0
+content_margin_top = 4.0
+content_margin_bottom = 4.0
+bg_color = Color( 0.125, 0.14375, 0.19375, 1 )
+
+[sub_resource type="Image" id=1391]
+data = {
+"data": PoolByteArray( 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 224, 224, 224, 0, 224, 224, 224, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 224, 224, 224, 0, 224, 224, 224, 255, 224, 224, 224, 255, 224, 224, 224, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 224, 224, 224, 0, 224, 224, 224, 255, 224, 224, 224, 255, 224, 224, 224, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 224, 224, 224, 0, 224, 224, 224, 255, 224, 224, 224, 255, 224, 224, 224, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 224, 224, 224, 0, 224, 224, 224, 255, 224, 224, 224, 255, 224, 224, 224, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 224, 224, 224, 0, 224, 224, 224, 255, 224, 224, 224, 255, 224, 224, 224, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 224, 224, 224, 0, 224, 224, 224, 0, 224, 224, 224, 0, 224, 224, 224, 0, 224, 224, 224, 0, 224, 224, 224, 0, 224, 224, 224, 255, 224, 224, 224, 255, 224, 224, 224, 0, 224, 224, 224, 0, 224, 224, 224, 0, 224, 224, 224, 0, 224, 224, 224, 0, 224, 224, 224, 0, 0, 0, 0, 0, 224, 224, 224, 0, 224, 224, 224, 255, 224, 224, 224, 255, 224, 224, 224, 255, 224, 224, 224, 255, 224, 224, 224, 255, 224, 224, 224, 255, 224, 224, 224, 255, 224, 224, 224, 255, 224, 224, 224, 255, 224, 224, 224, 255, 224, 224, 224, 255, 224, 224, 224, 255, 224, 224, 224, 255, 224, 224, 224, 255, 224, 224, 224, 0, 224, 224, 224, 0, 224, 224, 224, 255, 224, 224, 224, 255, 224, 224, 224, 255, 224, 224, 224, 255, 224, 224, 224, 255, 224, 224, 224, 255, 224, 224, 224, 255, 224, 224, 224, 255, 224, 224, 224, 255, 224, 224, 224, 255, 224, 224, 224, 255, 224, 224, 224, 255, 224, 224, 224, 255, 224, 224, 224, 255, 224, 224, 224, 0, 0, 0, 0, 0, 224, 224, 224, 0, 224, 224, 224, 0, 224, 224, 224, 0, 224, 224, 224, 0, 224, 224, 224, 0, 224, 224, 224, 0, 224, 224, 224, 255, 224, 224, 224, 255, 224, 224, 224, 0, 224, 224, 224, 0, 224, 224, 224, 0, 224, 224, 224, 0, 224, 224, 224, 0, 224, 224, 224, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 224, 224, 224, 0, 224, 224, 224, 255, 224, 224, 224, 255, 224, 224, 224, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 224, 224, 224, 0, 224, 224, 224, 255, 224, 224, 224, 255, 224, 224, 224, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 224, 224, 224, 0, 224, 224, 224, 255, 224, 224, 224, 255, 224, 224, 224, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 224, 224, 224, 0, 224, 224, 224, 255, 224, 224, 224, 255, 224, 224, 224, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 224, 224, 224, 0, 224, 224, 224, 255, 224, 224, 224, 255, 224, 224, 224, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 224, 224, 224, 0, 224, 224, 224, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 ),
+"format": "RGBA8",
+"height": 16,
+"mipmaps": false,
+"width": 16
+}
+
+[sub_resource type="ImageTexture" id=33]
+flags = 0
+flags = 0
+image = SubResource( 1391 )
+size = Vector2( 16, 16 )
+
+[sub_resource type="StyleBoxFlat" id=1390]
+content_margin_left = 10.0
+content_margin_right = 10.0
+content_margin_top = 5.0
+content_margin_bottom = 5.0
+bg_color = Color( 0.2, 0.23, 0.31, 1 )
+border_width_left = 1
+border_width_top = 1
+border_width_right = 1
+border_color = Color( 0.1, 0.115, 0.155, 1 )
+expand_margin_bottom = 1.0
+
+[sub_resource type="StyleBoxFlat" id=1389]
+content_margin_left = 10.0
+content_margin_right = 10.0
+content_margin_top = 5.0
+content_margin_bottom = 5.0
+bg_color = Color( 0.15, 0.1725, 0.2325, 1 )
+border_width_left = 1
+border_width_top = 1
+border_width_right = 1
+border_color = Color( 0.125, 0.14375, 0.19375, 1 )
+expand_margin_bottom = 1.0
+
+[sub_resource type="StyleBoxFlat" id=1387]
+content_margin_left = 2.0
+content_margin_right = 2.0
+content_margin_top = 4.0
+content_margin_bottom = 2.0
+bg_color = Color( 0.2, 0.23, 0.31, 1 )
+border_width_left = 1
+border_width_top = 1
+border_width_right = 1
+border_width_bottom = 1
+border_color = Color( 0.1, 0.115, 0.155, 1 )
+
+[sub_resource type="Image" id=1392]
+data = {
+"data": PoolByteArray( 0, 0, 0, 0, 220, 220, 220, 0, 223, 223, 223, 0, 223, 223, 223, 0, 223, 223, 223, 0, 223, 223, 223, 0, 223, 223, 223, 0, 223, 223, 223, 0, 223, 223, 223, 0, 0, 0, 0, 0, 0, 0, 0, 0, 210, 210, 210, 0, 222, 222, 222, 0, 223, 223, 223, 0, 222, 222, 222, 0, 0, 0, 0, 0, 220, 220, 220, 0, 220, 220, 220, 59, 223, 223, 223, 200, 223, 223, 223, 254, 223, 223, 223, 254, 223, 223, 223, 254, 223, 223, 223, 254, 223, 223, 223, 254, 223, 223, 223, 254, 223, 223, 223, 0, 215, 215, 215, 0, 210, 210, 210, 17, 222, 222, 222, 166, 223, 223, 223, 227, 222, 222, 222, 85, 222, 222, 222, 0, 222, 222, 222, 0, 222, 222, 222, 198, 221, 221, 221, 69, 222, 222, 222, 0, 223, 223, 223, 0, 223, 223, 223, 0, 223, 223, 223, 0, 223, 223, 223, 0, 223, 223, 223, 0, 218, 218, 218, 0, 221, 221, 221, 15, 223, 223, 223, 203, 223, 223, 223, 254, 223, 223, 223, 254, 223, 223, 223, 221, 223, 223, 223, 0, 223, 223, 223, 0, 223, 223, 223, 254, 222, 222, 222, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 211, 211, 211, 0, 215, 215, 215, 13, 223, 223, 223, 200, 223, 223, 223, 254, 223, 223, 223, 254, 223, 223, 223, 254, 223, 223, 223, 171, 223, 223, 223, 0, 223, 223, 223, 0, 223, 223, 223, 254, 223, 223, 223, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 203, 203, 203, 0, 208, 208, 208, 11, 223, 223, 223, 197, 223, 223, 223, 254, 223, 223, 223, 254, 223, 223, 223, 254, 222, 222, 222, 215, 221, 221, 221, 23, 221, 221, 221, 0, 223, 223, 223, 0, 223, 223, 223, 254, 223, 223, 223, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 210, 210, 210, 0, 198, 198, 198, 9, 223, 223, 223, 194, 223, 223, 223, 254, 223, 223, 223, 254, 223, 223, 223, 254, 223, 223, 223, 218, 214, 214, 214, 25, 217, 217, 217, 0, 0, 0, 0, 0, 223, 223, 223, 0, 223, 223, 223, 254, 223, 223, 223, 0, 0, 0, 0, 0, 0, 0, 0, 0, 220, 220, 220, 0, 223, 223, 223, 8, 222, 222, 222, 190, 223, 223, 223, 254, 223, 223, 223, 254, 223, 223, 223, 254, 223, 223, 223, 221, 217, 217, 217, 27, 215, 215, 215, 0, 223, 223, 223, 0, 0, 0, 0, 0, 223, 223, 223, 0, 223, 223, 223, 254, 223, 223, 223, 0, 0, 0, 0, 0, 218, 218, 218, 0, 218, 218, 218, 7, 223, 223, 223, 186, 223, 223, 223, 254, 223, 223, 223, 254, 223, 223, 223, 254, 223, 223, 223, 224, 219, 219, 219, 29, 218, 218, 218, 0, 223, 223, 223, 0, 223, 223, 223, 254, 223, 223, 223, 0, 223, 223, 223, 0, 223, 223, 223, 254, 223, 223, 223, 0, 221, 221, 221, 0, 220, 220, 220, 0, 221, 221, 221, 108, 223, 223, 223, 254, 223, 223, 223, 254, 223, 223, 223, 254, 223, 223, 223, 226, 223, 223, 223, 32, 221, 221, 221, 0, 0, 0, 0, 0, 223, 223, 223, 0, 223, 223, 223, 254, 223, 223, 223, 0, 0, 0, 0, 0, 223, 223, 223, 0, 222, 222, 222, 0, 221, 221, 221, 46, 220, 220, 220, 51, 221, 221, 221, 0, 222, 222, 222, 158, 223, 223, 223, 254, 223, 223, 223, 228, 218, 218, 218, 35, 220, 220, 220, 0, 0, 0, 0, 0, 0, 0, 0, 0, 223, 223, 223, 0, 223, 223, 223, 254, 223, 223, 223, 0, 0, 0, 0, 0, 223, 223, 223, 0, 223, 223, 223, 57, 223, 223, 223, 254, 223, 223, 223, 254, 222, 222, 222, 142, 0, 0, 0, 1, 222, 222, 222, 143, 221, 221, 221, 38, 219, 219, 219, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 223, 223, 223, 0, 223, 223, 223, 254, 223, 223, 223, 0, 0, 0, 0, 0, 223, 223, 223, 0, 223, 223, 223, 163, 223, 223, 223, 254, 223, 223, 223, 254, 223, 223, 223, 252, 222, 222, 222, 31, 222, 222, 222, 0, 221, 221, 221, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 223, 223, 223, 0, 223, 223, 223, 254, 223, 223, 223, 0, 223, 223, 223, 0, 223, 223, 223, 189, 223, 223, 223, 254, 223, 223, 223, 254, 223, 223, 223, 254, 223, 223, 223, 254, 221, 221, 221, 46, 221, 221, 221, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 222, 222, 222, 0, 223, 223, 223, 254, 223, 223, 223, 0, 221, 221, 221, 0, 221, 221, 221, 54, 222, 222, 222, 247, 223, 223, 223, 254, 223, 223, 223, 254, 222, 222, 222, 181, 221, 221, 221, 0, 223, 223, 223, 0, 223, 223, 223, 0, 223, 223, 223, 0, 223, 223, 223, 0, 223, 223, 223, 0, 222, 222, 222, 0, 221, 221, 221, 69, 222, 222, 222, 199, 222, 222, 222, 0, 0, 0, 0, 0, 221, 221, 221, 0, 221, 221, 221, 38, 222, 222, 222, 101, 221, 221, 221, 60, 221, 221, 221, 0, 223, 223, 223, 0, 223, 223, 223, 254, 223, 223, 223, 254, 223, 223, 223, 254, 223, 223, 223, 254, 223, 223, 223, 254, 223, 223, 223, 254, 223, 223, 223, 200, 220, 220, 220, 59, 220, 220, 220, 0, 0, 0, 0, 0, 0, 0, 0, 0, 221, 221, 221, 0, 222, 222, 222, 0, 221, 221, 221, 0, 0, 0, 0, 0, 0, 0, 0, 0, 223, 223, 223, 0, 223, 223, 223, 0, 223, 223, 223, 0, 223, 223, 223, 0, 223, 223, 223, 0, 223, 223, 223, 0, 223, 223, 223, 0, 220, 220, 220, 0, 0, 0, 0, 0 ),
+"format": "RGBA8",
+"height": 16,
+"mipmaps": false,
+"width": 16
+}
+
+[sub_resource type="ImageTexture" id=221]
+flags = 0
+flags = 0
+image = SubResource( 1392 )
+size = Vector2( 16, 16 )
+
+[sub_resource type="StyleBoxFlat" id=5]
+content_margin_left = 4.0
+content_margin_right = 4.0
+content_margin_top = 4.0
+content_margin_bottom = 4.0
+bg_color = Color( 0.15, 0.1725, 0.2325, 1 )
+border_width_left = 1
+border_width_top = 1
+border_width_right = 1
+border_width_bottom = 1
+border_color = Color( 0.1, 0.115, 0.155, 1 )
+
+[node name="Control" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+theme = ExtResource( 1 )
+script = ExtResource( 2 )
+__meta__ = {
+"_edit_lock_": true,
+"_edit_use_anchors_": false
+}
+
+[node name="Base" type="Panel" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+custom_styles/panel = SubResource( 1385 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+__meta__ = {
+"_edit_lock_": true,
+"_edit_use_anchors_": false
+}
+
+[node name="HBoxContainer" type="HBoxContainer" parent="VBoxContainer"]
+margin_right = 1024.0
+margin_bottom = 31.0
+
+[node name="Project" type="MenuButton" parent="VBoxContainer/HBoxContainer"]
+margin_right = 62.0
+margin_bottom = 31.0
+text = "Project"
+items = [ "New Project", null, 0, false, false, 0, 0, null, "", false, "Save Project", null, 0, false, false, 1, 0, null, "", false, "Open Project", null, 0, false, false, 2, 0, null, "", false, "", null, 0, false, false, -1, 0, null, "", true, "Export Project (.zip)", null, 0, false, false, 6, 0, null, "", false, "Export Texture (.png)", null, 0, false, false, 5, 0, null, "", false, "Export Layer (.png)", null, 0, false, false, 7, 0, null, "", false ]
+switch_on_hover = true
+
+[node name="Texture" type="MenuButton" parent="VBoxContainer/HBoxContainer"]
+margin_left = 66.0
+margin_right = 133.0
+margin_bottom = 31.0
+text = "Texture"
+items = [ "New Texture", null, 0, false, false, 8, 0, null, "", false ]
+switch_on_hover = true
+
+[node name="Layer" type="MenuButton" parent="VBoxContainer/HBoxContainer"]
+margin_left = 137.0
+margin_right = 189.0
+margin_bottom = 31.0
+text = "Layer"
+switch_on_hover = true
+
+[node name="Edit" type="MenuButton" parent="VBoxContainer/HBoxContainer"]
+margin_left = 193.0
+margin_right = 232.0
+margin_bottom = 31.0
+text = "Edit"
+switch_on_hover = true
+
+[node name="MarginContainer" type="MarginContainer" parent="VBoxContainer"]
+margin_top = 35.0
+margin_right = 1024.0
+margin_bottom = 600.0
+size_flags_vertical = 3
+custom_constants/margin_right = 4
+custom_constants/margin_left = 4
+custom_constants/margin_bottom = 4
+
+[node name="HSplitContainer" type="HSplitContainer" parent="VBoxContainer/MarginContainer"]
+margin_left = 4.0
+margin_right = 1020.0
+margin_bottom = 561.0
+
+[node name="VBoxContainer" type="VBoxContainer" parent="VBoxContainer/MarginContainer/HSplitContainer"]
+margin_right = 504.0
+margin_bottom = 561.0
+size_flags_horizontal = 3
+custom_constants/separation = 0
+
+[node name="HBoxContainer" type="HBoxContainer" parent="VBoxContainer/MarginContainer/HSplitContainer/VBoxContainer"]
+margin_right = 504.0
+margin_bottom = 33.0
+
+[node name="AddTexture" type="ToolButton" parent="VBoxContainer/MarginContainer/HSplitContainer/VBoxContainer/HBoxContainer"]
+margin_right = 28.0
+margin_bottom = 33.0
+icon = SubResource( 33 )
+
+[node name="Tabs" type="Tabs" parent="VBoxContainer/MarginContainer/HSplitContainer/VBoxContainer/HBoxContainer"]
+margin_left = 32.0
+margin_right = 504.0
+margin_bottom = 33.0
+size_flags_horizontal = 11
+custom_styles/tab_fg = SubResource( 1390 )
+custom_styles/tab_bg = SubResource( 1389 )
+tab_align = 0
+tab_close_display_policy = 2
+drag_to_rearrange_enabled = true
+script = ExtResource( 3 )
+
+[node name="Editor" type="PanelContainer" parent="VBoxContainer/MarginContainer/HSplitContainer/VBoxContainer"]
+show_behind_parent = true
+margin_top = 33.0
+margin_right = 504.0
+margin_bottom = 561.0
+rect_min_size = Vector2( 250, 250 )
+size_flags_horizontal = 3
+size_flags_vertical = 3
+custom_styles/panel = SubResource( 1387 )
+
+[node name="VBoxContainer" type="VBoxContainer" parent="VBoxContainer/MarginContainer/HSplitContainer/VBoxContainer/Editor"]
+margin_left = 2.0
+margin_top = 4.0
+margin_right = 502.0
+margin_bottom = 526.0
+
+[node name="Toolbar" type="HBoxContainer" parent="VBoxContainer/MarginContainer/HSplitContainer/VBoxContainer/Editor/VBoxContainer"]
+margin_right = 500.0
+margin_bottom = 31.0
+
+[node name="Control" type="Control" parent="VBoxContainer/MarginContainer/HSplitContainer/VBoxContainer/Editor/VBoxContainer/Toolbar"]
+margin_right = 468.0
+margin_bottom = 31.0
+size_flags_horizontal = 3
+
+[node name="ChangeBackground" type="MenuButton" parent="VBoxContainer/MarginContainer/HSplitContainer/VBoxContainer/Editor/VBoxContainer/Toolbar"]
+margin_left = 472.0
+margin_right = 500.0
+margin_bottom = 31.0
+hint_tooltip = "Background"
+size_flags_horizontal = 0
+size_flags_vertical = 0
+icon = SubResource( 221 )
+
+[node name="Background" type="ColorRect" parent="VBoxContainer/MarginContainer/HSplitContainer/VBoxContainer/Editor/VBoxContainer"]
+margin_top = 35.0
+margin_right = 500.0
+margin_bottom = 522.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+color = Color( 0.5, 0.51875, 0.56875, 1 )
+
+[node name="MarginContainer" type="MarginContainer" parent="VBoxContainer/MarginContainer/HSplitContainer/VBoxContainer/Editor/VBoxContainer/Background"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+custom_constants/margin_right = 4
+custom_constants/margin_top = 4
+custom_constants/margin_left = 4
+custom_constants/margin_bottom = 4
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ScrollContainer" type="ScrollContainer" parent="VBoxContainer/MarginContainer/HSplitContainer/VBoxContainer/Editor/VBoxContainer/Background/MarginContainer"]
+margin_left = 4.0
+margin_top = 4.0
+margin_right = 496.0
+margin_bottom = 483.0
+
+[node name="GridContainer" type="GridContainer" parent="VBoxContainer/MarginContainer/HSplitContainer/VBoxContainer/Editor/VBoxContainer/Background/MarginContainer/ScrollContainer"]
+margin_right = 76.0
+margin_bottom = 76.0
+columns = 4
+__meta__ = {
+"_edit_group_": true,
+"_edit_use_anchors_": false
+}
+
+[node name="ColorRect" type="ColorRect" parent="VBoxContainer/MarginContainer/HSplitContainer/VBoxContainer/Editor/VBoxContainer/Background/MarginContainer/ScrollContainer/GridContainer"]
+margin_right = 16.0
+margin_bottom = 16.0
+rect_min_size = Vector2( 16, 16 )
+color = Color( 0.972549, 0.0313726, 0.0313726, 1 )
+
+[node name="ColorRect2" type="ColorRect" parent="VBoxContainer/MarginContainer/HSplitContainer/VBoxContainer/Editor/VBoxContainer/Background/MarginContainer/ScrollContainer/GridContainer"]
+margin_left = 20.0
+margin_right = 36.0
+margin_bottom = 16.0
+rect_min_size = Vector2( 16, 16 )
+color = Color( 0.972549, 0.0313726, 0.0313726, 1 )
+
+[node name="ColorRect3" type="ColorRect" parent="VBoxContainer/MarginContainer/HSplitContainer/VBoxContainer/Editor/VBoxContainer/Background/MarginContainer/ScrollContainer/GridContainer"]
+margin_left = 40.0
+margin_right = 56.0
+margin_bottom = 16.0
+rect_min_size = Vector2( 16, 16 )
+color = Color( 0.972549, 0.0313726, 0.0313726, 1 )
+
+[node name="ColorRect4" type="ColorRect" parent="VBoxContainer/MarginContainer/HSplitContainer/VBoxContainer/Editor/VBoxContainer/Background/MarginContainer/ScrollContainer/GridContainer"]
+margin_left = 60.0
+margin_right = 76.0
+margin_bottom = 16.0
+rect_min_size = Vector2( 16, 16 )
+color = Color( 0.972549, 0.0313726, 0.0313726, 1 )
+
+[node name="ColorRect5" type="ColorRect" parent="VBoxContainer/MarginContainer/HSplitContainer/VBoxContainer/Editor/VBoxContainer/Background/MarginContainer/ScrollContainer/GridContainer"]
+margin_top = 20.0
+margin_right = 16.0
+margin_bottom = 36.0
+rect_min_size = Vector2( 16, 16 )
+color = Color( 0.972549, 0.0313726, 0.0313726, 1 )
+
+[node name="ColorRect6" type="ColorRect" parent="VBoxContainer/MarginContainer/HSplitContainer/VBoxContainer/Editor/VBoxContainer/Background/MarginContainer/ScrollContainer/GridContainer"]
+margin_left = 20.0
+margin_top = 20.0
+margin_right = 36.0
+margin_bottom = 36.0
+rect_min_size = Vector2( 16, 16 )
+color = Color( 0.972549, 0.0313726, 0.0313726, 1 )
+
+[node name="ColorRect7" type="ColorRect" parent="VBoxContainer/MarginContainer/HSplitContainer/VBoxContainer/Editor/VBoxContainer/Background/MarginContainer/ScrollContainer/GridContainer"]
+margin_left = 40.0
+margin_top = 20.0
+margin_right = 56.0
+margin_bottom = 36.0
+rect_min_size = Vector2( 16, 16 )
+color = Color( 0.972549, 0.0313726, 0.0313726, 1 )
+
+[node name="ColorRect8" type="ColorRect" parent="VBoxContainer/MarginContainer/HSplitContainer/VBoxContainer/Editor/VBoxContainer/Background/MarginContainer/ScrollContainer/GridContainer"]
+margin_left = 60.0
+margin_top = 20.0
+margin_right = 76.0
+margin_bottom = 36.0
+rect_min_size = Vector2( 16, 16 )
+color = Color( 0.972549, 0.0313726, 0.0313726, 1 )
+
+[node name="ColorRect9" type="ColorRect" parent="VBoxContainer/MarginContainer/HSplitContainer/VBoxContainer/Editor/VBoxContainer/Background/MarginContainer/ScrollContainer/GridContainer"]
+margin_top = 40.0
+margin_right = 16.0
+margin_bottom = 56.0
+rect_min_size = Vector2( 16, 16 )
+color = Color( 0.972549, 0.0313726, 0.0313726, 1 )
+
+[node name="ColorRect10" type="ColorRect" parent="VBoxContainer/MarginContainer/HSplitContainer/VBoxContainer/Editor/VBoxContainer/Background/MarginContainer/ScrollContainer/GridContainer"]
+margin_left = 20.0
+margin_top = 40.0
+margin_right = 36.0
+margin_bottom = 56.0
+rect_min_size = Vector2( 16, 16 )
+color = Color( 0.972549, 0.0313726, 0.0313726, 1 )
+
+[node name="ColorRect11" type="ColorRect" parent="VBoxContainer/MarginContainer/HSplitContainer/VBoxContainer/Editor/VBoxContainer/Background/MarginContainer/ScrollContainer/GridContainer"]
+margin_left = 40.0
+margin_top = 40.0
+margin_right = 56.0
+margin_bottom = 56.0
+rect_min_size = Vector2( 16, 16 )
+color = Color( 0.972549, 0.0313726, 0.0313726, 1 )
+
+[node name="ColorRect12" type="ColorRect" parent="VBoxContainer/MarginContainer/HSplitContainer/VBoxContainer/Editor/VBoxContainer/Background/MarginContainer/ScrollContainer/GridContainer"]
+margin_left = 60.0
+margin_top = 40.0
+margin_right = 76.0
+margin_bottom = 56.0
+rect_min_size = Vector2( 16, 16 )
+color = Color( 0.972549, 0.0313726, 0.0313726, 1 )
+
+[node name="ColorRect13" type="ColorRect" parent="VBoxContainer/MarginContainer/HSplitContainer/VBoxContainer/Editor/VBoxContainer/Background/MarginContainer/ScrollContainer/GridContainer"]
+margin_top = 60.0
+margin_right = 16.0
+margin_bottom = 76.0
+rect_min_size = Vector2( 16, 16 )
+color = Color( 0.972549, 0.0313726, 0.0313726, 1 )
+
+[node name="ColorRect14" type="ColorRect" parent="VBoxContainer/MarginContainer/HSplitContainer/VBoxContainer/Editor/VBoxContainer/Background/MarginContainer/ScrollContainer/GridContainer"]
+margin_left = 20.0
+margin_top = 60.0
+margin_right = 36.0
+margin_bottom = 76.0
+rect_min_size = Vector2( 16, 16 )
+color = Color( 0.972549, 0.0313726, 0.0313726, 1 )
+
+[node name="ColorRect15" type="ColorRect" parent="VBoxContainer/MarginContainer/HSplitContainer/VBoxContainer/Editor/VBoxContainer/Background/MarginContainer/ScrollContainer/GridContainer"]
+margin_left = 40.0
+margin_top = 60.0
+margin_right = 56.0
+margin_bottom = 76.0
+rect_min_size = Vector2( 16, 16 )
+color = Color( 0.972549, 0.0313726, 0.0313726, 1 )
+
+[node name="ColorRect16" type="ColorRect" parent="VBoxContainer/MarginContainer/HSplitContainer/VBoxContainer/Editor/VBoxContainer/Background/MarginContainer/ScrollContainer/GridContainer"]
+margin_left = 60.0
+margin_top = 60.0
+margin_right = 76.0
+margin_bottom = 76.0
+rect_min_size = Vector2( 16, 16 )
+color = Color( 0.972549, 0.0313726, 0.0313726, 1 )
+
+[node name="TabContainer" type="TabContainer" parent="VBoxContainer/MarginContainer/HSplitContainer"]
+margin_left = 512.0
+margin_right = 1016.0
+margin_bottom = 561.0
+size_flags_horizontal = 3
+tab_align = 0
+drag_to_rearrange_enabled = true
+
+[node name="Inspector" parent="VBoxContainer/MarginContainer/HSplitContainer/TabContainer" instance=ExtResource( 4 )]
+margin_right = -5.0
+custom_styles/panel = SubResource( 5 )
+
+[node name="Preview" type="ViewportContainer" parent="VBoxContainer/MarginContainer/HSplitContainer/TabContainer"]
+visible = false
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 5.0
+margin_top = 38.0
+margin_right = -5.0
+margin_bottom = -5.0
+size_flags_horizontal = 3
+
+[node name="SaveDialog" type="FileDialog" parent="."]
+margin_left = 315.373
+margin_top = 89.0589
+margin_right = 814.373
+margin_bottom = 379.059
+popup_exclusive = true
+window_title = "Datei speichern"
+resizable = true
+access = 2
+filters = PoolStringArray( "*.pat;Project File" )
+current_dir = "/home/modprog/Development/Godot/ColorTool"
+current_path = "/home/modprog/Development/Godot/ColorTool/"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="OpenDialog" type="FileDialog" parent="."]
+margin_left = 315.373
+margin_top = 89.0589
+margin_right = 814.373
+margin_bottom = 379.059
+popup_exclusive = true
+window_title = "Open a File"
+resizable = true
+mode = 0
+access = 2
+filters = PoolStringArray( "*.pat;Project File" )
+current_dir = "/home/modprog/Development/Godot/ColorTool"
+current_path = "/home/modprog/Development/Godot/ColorTool/"
+__meta__ = {
+"_edit_use_anchors_": false
+}
