@@ -35,6 +35,10 @@ window/dpi/allow_hidpi=true
 window/energy_saving/keep_screen_on=false
 window/stretch/aspect="expand"
 
+[editor_plugins]
+
+enabled=PoolStringArray( "terminal" )
+
 [gdnative]
 
 singletons=[ "res://git_api.gdnlib" ]
